@@ -1,6 +1,15 @@
-## FacePhys Model Publication 
+## FacePhys Model Release 
 
-FacePhys is a lightweight rPPG algorithm that uses State Space Models (SSMs) to model heart states. With a memory usage of only 4MB, it is ideal for on-device inference. 
+FacePhys is a lightweight rPPG algorithm that uses State Space Models (SSMs) to model heart states. With a memory usage of **only 4MB**, it is ideal for on-device inference. 
+<img width="1258" height="896" alt="image" src="https://github.com/user-attachments/assets/1f1b6bc8-39f4-49a6-98be-4dd234006549" />
+
+## Benchmark
+
+<img width="1303" height="418" alt="image" src="https://github.com/user-attachments/assets/9ce011be-e003-440b-b853-6e4c71fb5053" />
+
+## Python SDK 
+
+FacePhys has been added to [Open-rPPG](https://github.com/KegangWangCCNU/open-rppg). Open-rPPG is a JAX-based high-performance rPPG algorithm inference toolkit. 
 
 ## FacePhys Inference 
 
@@ -25,7 +34,7 @@ We tested this on multiple engines with a **batch size of 1** to simulate real-t
 > **Note:** PyTorch full graph compilation failed due to graph breaks.
 
 #### 2. CPU Performance
-**Device:** Dual Intel Xeon Gold 6138
+**Device:** Intel Xeon Gold 6138 (Single Core)
 
 | Runtime | Inference FPS | Backend |
 | :--- | ---: | :---: |
@@ -44,7 +53,7 @@ As shown in the GPU benchmarks, standard runtimes struggle with the SSM's fragme
 **Why LiteRT?**
 Since rPPG targets **on-device usage** rather than cloud deployment, we prioritized CPU efficiency over raw GPU throughput. Unlike `mamba-ssm`, we avoided writing custom CUDA kernels to maintain portability. Instead, we utilized the [LiteRT](https://github.com/google-ai-edge/LiteRT) cross-platform runtime, which provided the best balance of performance and portability on CPU backends.  
 
-### Example 
+#### Inference Example 
 
 ```python
 from inference import * 
@@ -59,4 +68,12 @@ wave, final_state = inference(ipt[0], model, state)
 plt.plot(wave)
 ```
 
-For more examples, see `examples.ipynb`.
+For more examples, see `examples.ipynb`. 
+
+### LiteRT Web Demo 
+
+We utilized `LiteRT` to construct a highly efficient rPPG demo capable of on-device inference. 
+
+### Paper 
+
+Download [FacePhys2025.pdf](https://github.com/user-attachments/files/24302692/FacePhys2025.pdf)
