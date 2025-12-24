@@ -72,7 +72,7 @@ For more examples, see `examples.ipynb`.
 
 ### LiteRT Web Demo 
 
-We utilized `LiteRT` to construct a highly efficient rPPG demo capable of on-device inference. 
+We utilized `LiteRT` to construct [a highly efficient rPPG demo capable of on-device inference.](https://kegangwangccnu.github.io/FacePhys-Demo/) 
 
 ### Paper 
 
