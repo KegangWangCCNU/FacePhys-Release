@@ -1,4 +1,4 @@
-## FacePhys Model Release 
+# FacePhys Model Release 
 
 FacePhys is a lightweight rPPG algorithm that uses State Space Models (SSMs) to model heart states. With a memory usage of **only 4MB**, it is ideal for on-device inference. 
 <img width="1258" height="896" alt="image" src="https://github.com/user-attachments/assets/1f1b6bc8-39f4-49a6-98be-4dd234006549" />
