@@ -1,0 +1,77 @@
+The MIT License (MIT)
+
+Copyright (c) 2025 Kegang Wang
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+Privacy Protection Addendum
+
+By using or distributing this software, you agree to the following additional
+terms:
+
+1. Local Processing (No Exceptions): All biometric inference and signal
+   processing must be performed exclusively on the local device. This
+   requirement is absolute and cannot be waived by consent. You must NOT
+   perform inference on, or offload raw user video feeds to, any external
+   server or cloud service.
+
+2. Transmission of Results: You must NOT transmit, upload, or stream derived
+   physiological metrics to any external server or cloud service, UNLESS the
+   data subject has given explicit, informed consent that clearly describes
+   what data is collected, where it is sent, how it will be used, and how long
+   it will be retained. Such consent must be freely given, specific, and
+   revocable at any time.
+
+3. Consent Requirement: You shall not use this Software to collect information
+   or physiological data from any individual without their explicit consent.
+
+4. No Backdoors in Distribution: If you redistribute or modify this code, you
+   must maintain these strict local-processing guarantees. You are prohibited
+   from modifying the software to surreptitiously collect or transmit user data.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+--------------------------------------------------------------------------------
+Additional Notices
+--------------------------------------------------------------------------------
+
+Scope. These terms cover everything in this repository, in every format: the
+source code, and the LiteRT, ONNX, and JAX/Keras weights, together with any
+TensorRT, TensorFlow, or other artifact built from them. The Privacy Protection
+Addendum applies to all of them without exception. Compiling the model for a
+server-side or cloud runtime does not remove the local-processing requirement.
+
+Relationship to open-rppg. The licensing notice in KegangWangCCNU/open-rppg
+defers the terms of pretrained models to their original authors. For the
+FacePhys model, this file is that statement of terms, and it governs the FacePhys
+weights wherever they are obtained.
+
+Training data. FacePhys was trained on the RLAP dataset, which is licensed
+separately under CC BY-NC-ND 4.0 and requires a signed Data Usage Agreement.
+Nothing in this license grants any right to the RLAP dataset itself.
+See https://github.com/KegangWangCCNU/RLAP-dataset
+
+Not a medical device. FacePhys is a research model. It is not a medical device
+and is not intended for the diagnosis, cure, mitigation, treatment, or
+prevention of any disease or condition. If you deploy it in a product that makes
+health or medical claims, you are solely responsible for your own regulatory
+compliance (for example FDA, CE/MDR, or NMPA). The Software is provided without
+warranty of any kind.
+
+Citation. If you use FacePhys in academic work, please cite the FacePhys paper
+linked in the README.
