@@ -74,23 +74,23 @@ For more examples, see `examples.ipynb`.
 
 We utilized `LiteRT` to construct [a highly efficient rPPG demo capable of on-device inference.](https://github.com/KegangWangCCNU/FacePhys-Demo) 
 
-### Paper 
-
-Download [FacePhys2025.pdf](https://github.com/user-attachments/files/24302692/FacePhys2025.pdf)
-
 ## License 
 
-**MIT License with Privacy Protection Addendum** — the same terms as [FacePhys-Demo](https://github.com/KegangWangCCNU/FacePhys-Demo). See [LICENSE](LICENSE) for the full text.
+Copyright (c) 2025 FacePhys
 
-Commercial use is permitted. The Privacy Protection Addendum is binding and requires that you:
+The FacePhys models and model architecture implementations are maintained
+by [FacePhys](https://facephys.com).
 
-- run **all** biometric inference and signal processing **on the local device** — this is absolute and **cannot be waived by consent**. Running inference on a server, or offloading raw video to one, is not permitted;
-- obtain the data subject's **explicit, informed, revocable consent** before transmitting derived physiological metrics off-device;
-- obtain **explicit consent** before collecting physiological data from any individual;
-- preserve these guarantees if you redistribute, and introduce no covert collection.
+The code, pretrained weights, and model artifacts are available for
+non-commercial academic research, including use, modification, and
+redistribution, under the [FacePhys Academic Research License](LICENSE).
 
-These terms apply to every format in this repository — LiteRT, ONNX, and JAX/Keras weights alike, along with any TensorRT or TensorFlow build derived from them. Compiling the model for a server-side runtime does not lift the local-processing requirement.
+Commercial use requires a separate written license.
+For commercial licensing and the latest models, contact
+[FacePhys](https://facephys.com).
 
-FacePhys was trained on the [RLAP dataset](https://github.com/KegangWangCCNU/RLAP-dataset), which is licensed separately under CC BY-NC-ND 4.0 and requires a signed Data Usage Agreement. This license grants no rights to the dataset itself.
+## Paper and Citation
 
-FacePhys is a research model, **not a medical device**.
+Please cite the FacePhys paper when using these materials in research:
+
+[FacePhys — NeurIPS 2026 paper page](https://neurips.cc/virtual/2026/loc/paris/poster/150724)
